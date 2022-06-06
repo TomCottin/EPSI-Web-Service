@@ -3,7 +3,7 @@ package com.cottin.webservice.controllers;
 import java.util.Optional;
 
 import com.cottin.webservice.models.Client;
-import com.cottin.webservice.services.ClientService;
+import com.cottin.webservice.services.IClientService;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequestMapping("/api/v1/clients")
 public class ClientController {
 
-    private final ClientService clientService;
+    private final IClientService clientService;
 
-    private ClientController(ClientService clientService) {
+    private ClientController(IClientService clientService) {
         this.clientService = clientService;
     }
 
